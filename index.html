@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phonie</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
+    
     <!-- Phonie form -->
     <section id="phonie-page" class="phonie-page">
       <h1>Phonie</h1>
-      <p class="sub_heading">Input your phone number to identify the telecoms carrier.</p>
+      <p>Input your phone number to identify the telecoms carrier.</p>
+      <form id="form" class="form" autocomplete="off">
+        <label class="output" id="output">Output</label>
 
-      <form id="form" class="form" onsubmit="return false">
         <label for="phonenumber" class="label">Phone Number:</label>
         <input
           type="tel"
           name="phonenumber"
-          id="phonenumber"
+          id="input"
           placeholder="Enter Phone Number"
           class="input"
+          pattern="[0-9]{11}"
           required
         />
 
-        <label class="output" id="output">Output</label>
+        <ul id="list" class="list"></ul>
 
         <button type="submit" form="form" class="button" value="Submit">
           Submit
